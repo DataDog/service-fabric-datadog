@@ -1,17 +1,12 @@
-# Service Fabric Cluster with Datadog installed as a VM extension on each node
+# Datadog Service Fabric Cluster Template
 
-These ARM templates set up unsecure Service Fabric clusters that include the Datadog agent on each node as a VM extension.
+These ARM templates set up an insecure Service Fabric cluster that includes the Datadog Agent on each node as a VM extension.
 
-## PowerShell commands to run:
+## Usage
 
-```powershell
-Login-AzureRmAccount
+Use the [Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps) to 
 
-Select-AzureRmSubscription -SubscriptionId <SubscriptionId>
+1. [create a resource group](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroup) and 
+2. [deploy this repository's template](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment).
 
-$ResouceGroup = <resourceGroupName>
-
-New-AzureRmResourceGroup -Name $ResouceGroup -Location "eastus"
-
-New-AzureRmResourceGroupDeployment -ResourceGroupName $ResouceGroup -TemplateFile '<Path to template_datadog.json>' -TemplateParameterFile '<Path to parameters.json>' -Verbose
-```
+There are two templates, for both Windows and Linux.
