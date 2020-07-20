@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "sfdatadogwindows"
+            "value": "sfdatadog"
         },
         "clusterLocation": {
             "value": "eastus"
@@ -24,7 +24,7 @@
             "value": "sfdatadogwindows-PubIP"
         },
         "dnsName": {
-            "value": "sfdatadogwindows"
+            "value": "sfdatadog"
         },
         "virtualNetworkName": {
             "value": "VNet-sfdatadogwindows"
@@ -36,10 +36,10 @@
             "value": "LBIP-sfdatadogwindows"
         },
         "applicationDiagnosticsStorageAccountName": {
-            "value": "sfdgsfdatadogwindows3365"
+            "value": "sfdgsfdatadog3365"
         },
         "supportLogStorageAccountName": {
-            "value": "sflogssfdatadogwindows7871"
+            "value": "sflogssfdatadog7871"
         },
         "vmImageSku": {
             "value": "2016-Datacenter-with-Containers"
