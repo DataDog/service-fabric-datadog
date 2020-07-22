@@ -192,6 +192,9 @@
         },
         "datadog_api_key": {
             "type": "string"
+        },
+        "datadog_site": {
+            "type": "string"
         }
     },
     "variables": {
@@ -514,6 +517,9 @@
                                   "typeHandlerVersion": "0.5",
                                   "autoUpgradeMinorVersion": true,
                                   "settings": {
+                                    "site": "[parameters('datadog_site')]"
+                                  },
+                                  "protectedSettings": {
                                     "api_key": "[parameters('datadog_api_key')]"
                                   }
                                 }
