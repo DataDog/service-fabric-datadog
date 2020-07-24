@@ -11,12 +11,6 @@
         "computeLocation": {
             "value": "eastus"
         },
-        "adminUserName": {
-            "value": "adminuser"
-        },
-        "adminPassword": {
-            "value": null
-        },
         "nicName": {
             "value": "NIC-sfdatadoglinux"
         },
@@ -65,8 +59,14 @@
         "nt0reverseProxyEndpointPort": {
             "value": 19081
         },
+        "adminUserName": {
+            "value": "admin"
+        },
+        "adminPassword": {
+            "value": null
+        },
         "datadog_api_key": {
-            "value": ""
+            "value": null
         },
         "datadog_site": {
             "value": "datadoghq.com"
