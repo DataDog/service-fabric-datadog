@@ -524,7 +524,7 @@
                                 "properties": {
                                   "publisher": "Datadog.Agent",
                                   "type": "DatadogLinuxAgent",
-                                  "typeHandlerVersion": "0.4",
+                                  "typeHandlerVersion": "1.0",
                                   "autoUpgradeMinorVersion": true,
                                   "settings": {
                                     "site": "[parameters('datadog_site')]"

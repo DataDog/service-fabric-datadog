@@ -514,7 +514,7 @@
                                 "properties": {
                                   "publisher": "Datadog.Agent",
                                   "type": "DatadogWindowsAgent",
-                                  "typeHandlerVersion": "0.5",
+                                  "typeHandlerVersion": "1.0",
                                   "autoUpgradeMinorVersion": true,
                                   "settings": {
                                     "site": "[parameters('datadog_site')]"

@@ -20,17 +20,11 @@
         "nicName": {
             "value": "NIC-sfdatadogwindows"
         },
-        "publicIPAddressName": {
-            "value": "sfdatadogwindows-PubIP"
-        },
         "dnsName": {
             "value": "sfdatadog"
         },
         "virtualNetworkName": {
             "value": "VNet-sfdatadogwindows"
-        },
-        "lbName": {
-            "value": "LB-sfdatadogwindows"
         },
         "lbIPName": {
             "value": "LBIP-sfdatadogwindows"
@@ -67,6 +61,9 @@
         },
         "datadog_api_key": {
             "value": ""
+        },
+        "datadog_site": {
+            "value": "datadoghq.com"
         }
     }
 }
