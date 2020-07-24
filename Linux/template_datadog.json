@@ -198,11 +198,6 @@
         }
     },
     "variables": {
-        "vmssApiVersion": "2017-03-30",
-        "lbApiVersion": "2015-06-15",
-        "vNetApiVersion": "2015-06-15",
-        "storageApiVersion": "2016-01-01",
-        "publicIPApiVersion": "2015-06-15",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
         "wadlogs": "<WadCfg><DiagnosticMonitorConfiguration>",
@@ -220,7 +215,7 @@
     },
     "resources": [
         {
-            "apiVersion": "[variables('storageApiVersion')]",
+            "apiVersion": "2016-01-01",
             "type": "Microsoft.Storage/storageAccounts",
             "name": "[parameters('supportLogStorageAccountName')]",
             "location": "[parameters('computeLocation')]",
@@ -235,7 +230,7 @@
             }
         },
         {
-            "apiVersion": "[variables('storageApiVersion')]",
+            "apiVersion": "2016-01-01",
             "type": "Microsoft.Storage/storageAccounts",
             "name": "[parameters('applicationDiagnosticsStorageAccountName')]",
             "location": "[parameters('computeLocation')]",
@@ -250,7 +245,7 @@
             }
         },
         {
-            "apiVersion": "[variables('vNetApiVersion')]",
+            "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/virtualNetworks",
             "name": "[parameters('virtualNetworkName')]",
             "location": "[parameters('computeLocation')]",
@@ -275,7 +270,7 @@
             }
         },
         {
-            "apiVersion": "[variables('publicIPApiVersion')]",
+            "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/publicIPAddresses",
             "name": "[concat(parameters('lbIPName'),'-','0')]",
             "location": "[parameters('computeLocation')]",
@@ -291,7 +286,7 @@
             }
         },
         {
-            "apiVersion": "[variables('lbApiVersion')]",
+            "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/loadBalancers",
             "name": "[concat('LB','-', parameters('clusterName'),'-',parameters('vmNodeType0Name'))]",
             "location": "[parameters('computeLocation')]",
@@ -480,7 +475,7 @@
             }
         },
         {
-            "apiVersion": "[variables('vmssApiVersion')]",
+            "apiVersion": "2017-03-30",
             "type": "Microsoft.Compute/virtualMachineScaleSets",
             "name": "[parameters('vmNodeType0Name')]",
             "location": "[parameters('computeLocation')]",
@@ -631,11 +626,11 @@
                 ],
                 "clusterState": "Default",
                 "diagnosticsStorageAccountConfig": {
-                    "blobEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), variables('storageApiVersion')).primaryEndpoints.blob]",
+                    "blobEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), '2016-01-01').primaryEndpoints.blob]",
                     "protectedAccountKeyName": "StorageAccountKey1",
-                    "queueEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), variables('storageApiVersion')).primaryEndpoints.queue]",
+                    "queueEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), '2016-01-01').primaryEndpoints.queue]",
                     "storageAccountName": "[parameters('supportLogStorageAccountName')]",
-                    "tableEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), variables('storageApiVersion')).primaryEndpoints.table]"
+                    "tableEndpoint": "[reference(concat('Microsoft.Storage/storageAccounts/', parameters('supportLogStorageAccountName')), '2016-01-01').primaryEndpoints.table]"
                 },
                 "managementEndpoint": "[concat('http://',reference(concat(parameters('lbIPName'),'-','0')).dnsSettings.fqdn,':',parameters('nt0fabricHttpGatewayPort'))]",
                 "nodeTypes": [
