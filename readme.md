@@ -4,7 +4,7 @@ These ARM templates set up an insecure Service Fabric cluster that includes the 
 
 ## Usage
 
-There are two templates, for both Windows and Linux.
+There are two templates: one that sets up a Windows cluster and another one that sets up a Linux cluster.
 First, select the template you want to use and fill in the parameters, including Datadog's API key, Datadog's site and the administrator password for each node's administrator account.
 
 After that, use the [Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps) to 
