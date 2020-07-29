@@ -4,12 +4,12 @@
 
 ### Local testing
 
-To test the template without actually deploying it there are two basic tools that you can use
+To test the template without actually deploying, use one of these tools:
 
-1. The [Azure Resource Manager Template Toolkit](https://github.com/Azure/arm-ttk) provides a series of scripts for enforcing best practices when writing templates.
+- The [Azure Resource Manager Template Toolkit](https://github.com/Azure/arm-ttk) provides a series of scripts for enforcing best practices when writing templates.
    These are best practices and we do not follow all of them. In particular, currently we do not follow the rules for API versions and `concat` usage.
-   It is recommended that you compare the output of the script for the template you are modifying before and after your changes to check that you do not introduce any new issues.
-2. You can run some checks if you follow the Usage instructions but append the `-WhatIf` command to do a dry run.
+   Datadog recommends that you compare the output of the script for the template you are modifying before and after your changes to check that you do not introduce any new issues.
+- You can run some checks if you follow the usage instructions but append the `-WhatIf` command to do a dry run.
 
 ### Testing deployment
 
