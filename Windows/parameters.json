@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "sfdatadogwindows"
+            "value": "sfdatadog"
         },
         "clusterLocation": {
             "value": "eastus"
@@ -11,35 +11,23 @@
         "computeLocation": {
             "value": "eastus"
         },
-        "adminUserName": {
-            "value": "dekapur"
-        },
-        "adminPassword": {
-            "value": null
-        },
         "nicName": {
             "value": "NIC-sfdatadogwindows"
         },
-        "publicIPAddressName": {
-            "value": "sfdatadogwindows-PubIP"
-        },
         "dnsName": {
-            "value": "sfdatadogwindows"
+            "value": "sfdatadog"
         },
         "virtualNetworkName": {
             "value": "VNet-sfdatadogwindows"
-        },
-        "lbName": {
-            "value": "LB-sfdatadogwindows"
         },
         "lbIPName": {
             "value": "LBIP-sfdatadogwindows"
         },
         "applicationDiagnosticsStorageAccountName": {
-            "value": "sfdgsfdatadogwindows3365"
+            "value": "sfdgsfdatadog3365"
         },
         "supportLogStorageAccountName": {
-            "value": "sflogssfdatadogwindows7871"
+            "value": "sflogssfdatadog7871"
         },
         "vmImageSku": {
             "value": "2016-Datacenter-with-Containers"
@@ -65,8 +53,17 @@
         "nt0reverseProxyEndpointPort": {
             "value": 19081
         },
+        "adminUserName": {
+            "value": "admin"
+        },
+        "adminPassword": {
+            "value": null
+        },
         "datadog_api_key": {
-            "value": ""
+            "value": null
+        },
+        "datadog_site": {
+            "value": "datadoghq.com"
         }
     }
 }
