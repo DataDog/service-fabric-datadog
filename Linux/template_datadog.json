@@ -191,7 +191,7 @@
             "defaultValue": "Standard_D1_v2"
         },
         "datadog_api_key": {
-            "type": "string"
+            "type": "securestring"
         },
         "datadog_site": {
             "type": "string"
